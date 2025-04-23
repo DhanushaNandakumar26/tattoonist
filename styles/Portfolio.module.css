@@ -1,0 +1,158 @@
+/* styles/Home.module.css */
+.container {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .portfolioCard {
+    background-color: #1E1E1E;
+    width: 100%;
+    max-width: 65%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .header {
+    background-color: #2D2D2D;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .header h1 {
+    color: #F8F8F8;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .header h2 {
+    color: #B3B3B3;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .leftSection, .rightSection {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .artistImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .socialLinks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .socialIcon {
+    background-color: #333;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  
+  .socialIcon:hover {
+    background: linear-gradient(45deg, #555, #333);
+  }
+  
+  .bioSection h3, .skillsSection h3, .gallerySection h3 {
+    margin-bottom: 1rem;
+    color: #F8F8F8;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .bioSection h3::after, .skillsSection h3::after, .gallerySection h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #555, #333);
+  }
+  
+  .bioSection p {
+    color: #B3B3B3;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skillTag {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .miniGallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .galleryItem {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+    
+    .miniGallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+
+  

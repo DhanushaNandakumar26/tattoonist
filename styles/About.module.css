@@ -1,0 +1,126 @@
+.aboutContainer {
+    min-width: 1200px;
+    max-width: 1250px;
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); /* Gradient dark background */
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ff4d4d; /* Vibrant red for emphasis */
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(255, 77, 77, 0.3);
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .storySection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .storySection.reverse {
+    flex-direction: row-reverse; /* Alternates image position */
+  }
+
+  p.description{
+    line-height: 1.8rem;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: #d0d0d0; /* Lighter gray for readability */
+    flex: 1;
+    text-align: left;
+    font-style: italic; /* Adds storytelling vibe */
+  }
+  
+  .image {
+    width: 100%;
+    max-width: 450px;
+    max-height: 550px;
+    height: auto;
+    border-radius: 10px;
+    filter: grayscale(20%) sepia(10%); /* Subtle color effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .image:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%) sepia(0%);
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .title {
+      font-size: 4rem;
+      margin-bottom: 50px;
+    }
+  
+    .description {
+      font-size: 1.3rem;
+    }
+  
+    .image {
+      max-width: 500px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .storySection,
+    .storySection.reverse {
+      flex-direction: column;
+    }
+  
+    .image {
+      max-width: 350px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+  
+    .description {
+      font-size: 1.1rem;
+    }
+  
+    .image {
+      max-width: 300px;
+    }
+  }
+  
+  .navbarContainer {
+    min-height: 100vh;
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
