@@ -1,19 +1,19 @@
 
 export const reviews = [
     {
-      name: "Alice",
+      name: "Jay Kaki",
       rating: 5,
-      comment: "I had an amazing experience with this service! The team was extremely professional and attentive to all my needs. From the moment I reached out, I felt like I was in good hands. The quality of the service exceeded my expectations, and they took the time to explain everything thoroughly. I can’t recommend them enough for anyone looking for top-notch service. I will definitely be coming back for future needs!"
+      comment: "I got a tattoo from Tattoonist, and I couldn’t be happier with the result! The artist’s attention to detail and skill are truly remarkable. I chose a unique design that combined elements close to my heart, and he brought it to life beautifully with precision and creativity. The studio was clean, the atmosphere was friendly, and I felt very comfortable throughout the process. Tattoonist’s commitment to customer satisfaction really shows in their work. Highly recommend them to anyone looking for quality tattoo artistry. Thank you for an incredible experience!"
     },
     {
-      name: "Bob",
-      rating: 4,
-      comment: "The service was very good, but there were a few minor hiccups during the process. The team was responsive and handled everything with professionalism. However, I feel there could have been better communication at times to ensure smoother coordination. Despite that, the quality of work was great, and I’m satisfied with the outcome. I would recommend this service, though I think there’s some room for improvement."
+      name: "MVJ MEDIA",
+      rating: 5,
+      comment: "I recently got tattoos on my hand and loved the experience! The shop had a welcoming atmosphere, the artists were highly skilled, and they took great care in making sure everything was clean and comfortable. Highly recommend!"
     },
     {
-      name: "Charlie",
+      name: "Arjun S Kumar",
       rating: 5,
-      comment: "I had a wonderful experience from start to finish! The team was friendly, efficient, and went above and beyond to make sure I was satisfied with every step. They really took the time to understand my requirements and deliver exactly what I was looking for. The attention to detail was remarkable, and I was kept informed throughout the entire process. I couldn’t have asked for better service, and I’ll definitely be using them again in the future!"
+      comment: "The brilliance of your art speaks volumes! Every detail, every stroke, and every idea behind it reflects your immense talent. The world is lucky to witness such beauty through your work! Keep up the good work bro!! Grow high!!"
     },
   ];
 

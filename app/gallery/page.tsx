@@ -253,7 +253,7 @@ const tattooData: Tattoo[] = [
   { id: 21, title: 'Shiva Trident', category: 'shiva', mediaUrl: '/31.jpg', mediaType: 'image' },
   { id: 22, title: 'Eagle Tattoo', category: 'eagle', mediaUrl: '/32.jpg', mediaType: 'image' },
   // Add video examples
-  // { id: 23, title: 'Minimal Tattoo', category: 'minimal', mediaUrl: '/tattoo-video-1.mp4', mediaType: 'video' },
+  { id: 23, title: 'Minimal Tattoo', category: 'minimal', mediaUrl: '/tattoo-video-1.mp4', mediaType: 'video' },
   // { id: 24, title: 'Shiva Tattoo', category: 'shiva', mediaUrl: '/tattoo-video-2.mp4', mediaType: 'video' },
   // { id: 25, title: 'Back Piece Process', category: 'back', mediaUrl: '/back-tattoo-process.mp4', mediaType: 'video' },
 ];
