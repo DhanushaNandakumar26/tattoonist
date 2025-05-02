@@ -19,19 +19,14 @@ const BlogDetailPage = ({ params }: BlogDetailProps) => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
   const scale = useTransform(scrollY, [0, 300], [1, 1.1]);
   const blur = useTransform(scrollY, [0, 300], [0, 5]);
-  
-  useEffect(() => {
-    const unwrapParams = async () => {
-      const unwrappedParams = await params; // Wait for params to resolve
-      const foundBlog = blogData.find(b => b.id === Number(unwrappedParams?.id));
-      if (foundBlog) {
-        setBlog(foundBlog);
-      }
-    };
 
-    unwrapParams();
-  }, [params]);
-  
+  useEffect(() => {
+    const foundBlog = blogData.find(b => b.id === Number(params.id));
+    if (foundBlog) {
+      setBlog(foundBlog);
+    }
+  }, [params.id]);
+
   if (!blog) {
     return (
       <div className={styles.container}>
