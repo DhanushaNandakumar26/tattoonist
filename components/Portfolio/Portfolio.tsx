@@ -201,7 +201,7 @@ const Portfolio: NextPage = () => {
 
               </motion.p>
               <motion.p variants={itemVariants}>
-                I'm passionate about collaborating with clients to create custom, meaningful pieces that reflect their personal stories. 
+                I&apos;m passionate about collaborating with clients to create custom, meaningful pieces that reflect their personal stories. 
 
               </motion.p>
             </motion.div>

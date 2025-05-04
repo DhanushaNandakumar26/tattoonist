@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import styles from '../../../styles/Blog.module.css';
 import Navbar from '@/components/Navbar/Navbar';
 import { blogData, Blog } from '@/components/utils/constants';
+import Image from 'next/image';
 
 interface BlogDetailProps {
   params: { id: string };
@@ -130,7 +131,7 @@ const BlogDetailPage = ({ params }: BlogDetailProps) => {
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        <img src={relatedBlog.imageUrl} alt={relatedBlog.title} />
+                        <Image src={relatedBlog.imageUrl} alt={relatedBlog.title} />
                         <h4>{relatedBlog.title}</h4>
                       </motion.div>
                     ))

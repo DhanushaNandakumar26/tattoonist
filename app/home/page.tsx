@@ -69,7 +69,7 @@ export default function FirstSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
               >
-                Ready to Get Inked? Let's Talk!
+                Ready to Get Inked? Let&apos;s Talk!
               </motion.h3>
               <motion.span
                 className={styles.heroContent}
@@ -77,7 +77,7 @@ export default function FirstSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
               >
-                Your body is a canvas, and every tattoo tells a story—let's create yours with precision, passion, and artistry. Book your session today and wear your story for a lifetime!
+                Your body is a canvas, and every tattoo tells a story—let&apos;s create yours with precision, passion, and artistry. Book your session today and wear your story for a lifetime!
               </motion.span>
               <motion.button
                 className={styles.heroButton}
