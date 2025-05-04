@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import styles from '../../styles/Blog.module.css';
 import Navbar from '@/components/Navbar/Navbar';
 import { blogData } from '@/components/utils/constants';
-import Image from 'next/image';
 
 const BlogList = () => {
   const router = useRouter();
@@ -73,7 +72,7 @@ const BlogList = () => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <div className={styles.blogImageContainer}>
-                    <Image src={blog.imageUrl} alt={blog.title} className={styles.blogImage} />
+                    <img src={blog.imageUrl} alt={blog.title} className={styles.blogImage} />
                     <div className={styles.imageOverlay}>
                       <span className={styles.readTime}>{blog.readTime}</span>
                     </div>
