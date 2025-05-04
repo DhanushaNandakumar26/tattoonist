@@ -19,7 +19,8 @@ export default function FirstSection() {
 
   useEffect(() => {
     setIsLoaded(true);
-  }, []);
+    console.log(isLoaded)
+  }, [isLoaded]);
 
   const handleClick = () => {
     router.push('/contact'); // e.g., '/about'
@@ -69,7 +70,7 @@ export default function FirstSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
               >
-                Ready to Get Inked? Let's Talk!
+                Ready to Get Inked? Let&apos;s Talk!
               </motion.h3>
               <motion.span
                 className={styles.heroContent}
@@ -77,7 +78,7 @@ export default function FirstSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
               >
-                Your body is a canvas, and every tattoo tells a story—let's create yours with precision, passion, and artistry. Book your session today and wear your story for a lifetime!
+                Your body is a canvas, and every tattoo tells a story—let&apos;s create yours with precision, passion, and artistry. Book your session today and wear your story for a lifetime!
               </motion.span>
               <motion.button
                 className={styles.heroButton}
@@ -98,7 +99,7 @@ export default function FirstSection() {
                     animate={{ y: [0, -10, 0] }}
                     transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
                   >
-                    <p>"Tattoos tell stories, they express identity, culture, and art in one stroke."</p>
+                    <p>&quot;Tattoos tell stories, they express identity, culture, and art in one stroke.&quot;</p>
                   </motion.div>
                   <button className={`${styles.sendButton} ${styles.bottomRight}`}>
                     <Send size={18} />
@@ -111,7 +112,7 @@ export default function FirstSection() {
                     animate={{ y: [0, -10, 0] }}
                     transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut", delay: 0.5 }}
                   >
-                    <p>"Ink your skin with meaning, and let your body be the canvas of your soul."</p>
+                    <p>&quot;Ink your skin with meaning, and let your body be the canvas of your soul.&quot;</p>
                   </motion.div>
                   <button className={`${styles.sendButton} ${styles.topLeft}`}>
                     <Send size={18} />

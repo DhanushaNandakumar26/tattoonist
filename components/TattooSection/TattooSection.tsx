@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import styles from '../../styles/TattooSection.module.css';
-import { relative } from 'path';
+import Image from 'next/image';
 
 const tattooTypes = [
   {
@@ -21,7 +21,6 @@ const tattooTypes = [
     image: '/17.jpg',
     description: 'Got a tattoo you’ve outgrown or regret? A cover-up tattoo is your chance to transform it into something beautiful and meaningful. Whether it’s an old name, faded ink, or a design that no longer represents you, our skilled artists specialize in turning the past into powerful new art. Using bold lines, creative shading, and custom designs, we seamlessly blend your existing tattoo into a fresh masterpiece. From elegant florals and mystical mandalas to fierce animals and abstract art – we bring your vision to life. Sometimes, all it takes is the right design to start over – without erasing your story. Let your skin tell the story you choose to carry.',
   },
-  
   {
     title: 'Shiva Tattoos – Inked Power, Divine Transformation',
     image: '/tattoo-5.jpg',
@@ -33,14 +32,21 @@ const tattooTypes = [
     description: `Anime tattoos are more than just art—they're a tribute to the stories, emotions, and characters that left a mark on your heart. From bold, action-packed scenes to soft, emotional moments, each design captures the magic of your favorite anime series. Whether it's a fierce Naruto pose, a delicate Sailor Moon silhouette, or the haunting beauty of Spirited Away, anime tattoos are perfect for expressing your inner otaku in the most personal way. Our artists specialize in fine-line details, vibrant colors, and custom designs that bring your favorite characters to life—right on your skin. Celebrate your fandom. Carry your favorite world with you. Because anime isn’t just something you watch—it’s something you feel.`,
   },
   {
-    title: ' Portrait Tattoos – Forever Faces, Inked with Soul',
+    title: 'Portrait Tattoos – Forever Faces, Inked with Soul',
     image: '/tattoo-3.jpg',
     description: `Portrait tattoos capture emotion, memory, and personality in the most powerful way. Whether it’s a loved one, a legendary figure, or a favorite character, each portrait tells a deeply personal story that stays with you—forever. From hyper-realistic black and grey to stylized or color-rich designs, our artists focus on fine details, expression, and lifelike depth. Every stroke is crafted with precision to preserve the essence of the person or character you cherish. Perfect for honoring someone special or expressing a deep connection, portrait tattoos are more than ink—they’re emotion frozen in time.`,
   },
-
 ];
 
-const TattooSection = ({ title, image, description, index, onLastCardStacked }: any) => {
+interface TattooSectionProps {
+  title: string;
+  image: string;
+  description: string;
+  index: number;
+  onLastCardStacked: () => void;
+}
+
+const TattooSection = ({ title, image, description, index, onLastCardStacked }: TattooSectionProps) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -91,12 +97,19 @@ const TattooSection = ({ title, image, description, index, onLastCardStacked }: 
       transition={{ duration: 0.5, delay: index * 0.2 }}
     >
       <div className={styles.leftSection}>
-        <motion.img
-          src={image}
-          alt={title}
+        <motion.div
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-        />
+          style={{ position: 'relative', width: '100%', height: '400px' }} // Explicit height
+        >
+          <Image
+            src={image}
+            alt={title}
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 768px) 100vw, 50vw" // Optimize image sizes
+          />
+        </motion.div>
       </div>
       <div className={styles.verticalLine}></div>
       <div className={styles.rightSection}>
@@ -111,15 +124,6 @@ export default function TattooShowcase() {
   const headerRef = useRef(null);
   const [isLastCardStacked, setIsLastCardStacked] = useState(false);
 
-  const { scrollYProgress: headerScroll } = useScroll({
-    target: headerRef,
-    offset: ['start start', 'end start'],
-  });
-
-  // Control header stickiness: sticky until last card is stacked, then relative
-  // const headerPosition = isLastCardStacked ? 'relative' : 'sticky';
-  const headerTop = isLastCardStacked ? 'auto' : 0;
-
   const handleLastCardStacked = () => {
     setIsLastCardStacked(true); // Update state when last card is stacked
   };
@@ -130,8 +134,8 @@ export default function TattooShowcase() {
         ref={headerRef}
         className={styles.header}
         style={{
-          position: 'relative', // Sticky until last card, then relative
-          top: headerTop, // 0 when sticky, auto when relative
+          position: 'relative', // Changed to relative as per logic
+          top: isLastCardStacked ? 'auto' : 0, // 0 when sticky, auto when relative
         }}
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

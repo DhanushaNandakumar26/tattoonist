@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FaInstagram, FaYoutube, FaFacebook, FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaFacebook } from 'react-icons/fa';
 import styles from '../../styles/Portfolio.module.css';
 import { SiThreads } from 'react-icons/si';
 import { FaMapMarkerAlt } from 'react-icons/fa'; // Add at the top with other icons
@@ -201,7 +201,7 @@ const Portfolio: NextPage = () => {
 
               </motion.p>
               <motion.p variants={itemVariants}>
-                I'm passionate about collaborating with clients to create custom, meaningful pieces that reflect their personal stories. 
+                I&apos;m passionate about collaborating with clients to create custom, meaningful pieces that reflect their personal stories. 
 
               </motion.p>
             </motion.div>

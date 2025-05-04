@@ -2,30 +2,31 @@
 
 import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRouter } from 'next/navigation';
+import { useRouter, useParams } from 'next/navigation';
 import styles from '../../../styles/Blog.module.css';
 import Navbar from '@/components/Navbar/Navbar';
 import { blogData, Blog } from '@/components/utils/constants';
+import Image from 'next/image';
 
-interface BlogDetailProps {
-  params: { id: string };
-}
-
-const BlogDetailPage = ({ params }: BlogDetailProps) => {
+const BlogDetailPage = () => {
   const router = useRouter();
+  const { id } = useParams(); // ← useParams returns string | string[] | undefined
   const [blog, setBlog] = useState<Blog | null>(null);
+
   const { scrollY } = useScroll();
-  
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
   const scale = useTransform(scrollY, [0, 300], [1, 1.1]);
   const blur = useTransform(scrollY, [0, 300], [0, 5]);
 
   useEffect(() => {
-    const foundBlog = blogData.find(b => b.id === Number(params.id));
+    if (!id || Array.isArray(id)) return;
+
+    const blogId = Number(id);
+    const foundBlog = blogData.find(b => b.id === blogId);
     if (foundBlog) {
       setBlog(foundBlog);
     }
-  }, [params.id]);
+  }, [id]);
 
   if (!blog) {
     return (
@@ -59,14 +60,13 @@ const BlogDetailPage = ({ params }: BlogDetailProps) => {
       <div className={styles.navbarContainer}>
         <main className={styles.main}>
           <Navbar />
-          
-          <motion.div 
+          <motion.div
             className={styles.heroImage}
-            style={{ 
+            style={{
               backgroundImage: `url(${blog.imageUrl})`,
-              opacity: opacity,
-              scale: scale,
-              filter: `blur(${blur}px)`
+              opacity,
+              scale,
+              filter: `blur(${blur.get()}px)`,
             }}
           >
             <div className={styles.heroOverlay}>
@@ -95,17 +95,17 @@ const BlogDetailPage = ({ params }: BlogDetailProps) => {
             className={styles.contentWrapper}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 0.6, 
+            transition={{
+              duration: 0.6,
               ease: 'easeOut',
-              delay: 0.3
+              delay: 0.3,
             }}
           >
             <div
               className={styles.content}
               dangerouslySetInnerHTML={{ __html: blog.content }}
             />
-            
+
             <motion.div className={styles.blogNavigation}>
               <motion.button
                 className={styles.backButton}
@@ -115,7 +115,7 @@ const BlogDetailPage = ({ params }: BlogDetailProps) => {
               >
                 Back to Blog
               </motion.button>
-              
+
               <div className={styles.relatedPosts}>
                 <h3>Related Posts</h3>
                 <div className={styles.relatedPostGrid}>
@@ -123,18 +123,23 @@ const BlogDetailPage = ({ params }: BlogDetailProps) => {
                     .filter(b => b.id !== blog.id)
                     .slice(0, 2)
                     .map(relatedBlog => (
-                      <motion.div 
-                        key={relatedBlog.id} 
-                        className={styles.relatedPostCard}
+                      <motion.div
+                        key={relatedBlog.id}
+                        className={`${styles.relatedPostCard} card`}
                         onClick={() => router.push(`/blog/${relatedBlog.id}`)}
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        <img src={relatedBlog.imageUrl} alt={relatedBlog.title} />
+                        <Image
+                          src={relatedBlog.imageUrl}
+                          alt={relatedBlog.title}
+                          width={300}
+                          height={200}
+                          style={{ objectFit: 'cover' }}
+                        />
                         <h4>{relatedBlog.title}</h4>
                       </motion.div>
-                    ))
-                  }
+                    ))}
                 </div>
               </div>
             </motion.div>
