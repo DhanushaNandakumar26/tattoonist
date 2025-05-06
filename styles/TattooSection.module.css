@@ -7,11 +7,14 @@
 }
 
 .header {
-    position: relative; /* Changed to relative so it scrolls naturally after initial view */
+    position: relative;
+    /* Changed to relative so it scrolls naturally after initial view */
     padding: 20px;
     text-align: center;
-    z-index: 10; /* Still above sections initially */
-    transition: top 0.3s ease; /* Smooth transition */
+    z-index: 10;
+    /* Still above sections initially */
+    transition: top 0.3s ease;
+    /* Smooth transition */
 }
 
 .header h2 {
@@ -34,25 +37,30 @@
 .tattooSection {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Reduced margin to control spacing */
+    margin-bottom: 20px;
+    /* Reduced margin to control spacing */
     background: #111111;
     border-radius: 15px;
     border: 1px solid #787878;
-    border-top: 2px solid #f0f0f0; /* Visible top border */
+    border-top: 2px solid #f0f0f0;
+    /* Visible top border */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    height: 300px; /* Fixed height for consistent stacking */
-    overflow: hidden; /* Prevent content from spilling out */
+    height: 300px;
+    /* Fixed height for consistent stacking */
+    overflow: hidden;
+    /* Prevent content from spilling out */
     height: 100%;
 }
 
 /* Sticky sections centered */
 .tattooSection.sticky {
     position: sticky;
-    top: calc(50% - 150px); /* Center the section (half of 300px height) */
+    top: calc(50% - 150px);
+    /* Center the section (half of 300px height) */
 }
 
 /* Add an offset to the header when scroll reaches the 4th card */
-.tattooSection:nth-of-type(4):in-viewport ~ .header {
+.tattooSection:nth-of-type(4):in-viewport~.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -106,11 +114,13 @@
     .tattooSection {
         flex-direction: column;
         margin-bottom: 20px;
-        height: auto; /* Adjust height for mobile */
+        height: auto;
+        /* Adjust height for mobile */
     }
 
     .tattooSection.sticky {
-        top: 20px; /* Fallback for mobile */
+        top: 20px;
+        /* Fallback for mobile */
     }
 
     .verticalLine {
@@ -119,7 +129,7 @@
         margin: 20px 0;
     }
 
-    .leftSection{
+    .leftSection {
         width: 100%;
     }
 

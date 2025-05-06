@@ -12,7 +12,7 @@ const ImageGallery = () => {
     { id: 1, src: "/18.jpg", alt: "Gallery image 1", description: "Bold and timeless, Karna tattoos embody strength, loyalty, and the spirit of a true warrior. Each design captures the essence of his sacrifice, courage, and legendary presence." },
     { id: 2, src: "/12.jpg", alt: "Gallery image 2", description: "A vibrant tribute to Kerala's classical art, this Kathakali tattoo captures the expressive green (heroic) and red (demonic) faces. It symbolizes the timeless dance of good and evil through bold colors and intricate detail." },
     { id: 3, src: "/25.jpg", alt: "Gallery image 3", description: "A delicate blend of endless love and natural beauty, this infinity tattoo is gracefully entwined with blooming flowers. It symbolizes eternal growth, connection, and the beauty that blossoms over time." },
-    { id: 4, src: "/11.jpg", alt: "Gallery image 4", description: "A symbol of guidance and direction, the compass tattoo represents the journey of life and staying true to one's path. Perfect for adventurers at heart, it reflects purpose, exploration, and inner clarity." },   
+    { id: 4, src: "/11.jpg", alt: "Gallery image 4", description: "A symbol of guidance and direction, the compass tattoo represents the journey of life and staying true to one's path. Perfect for adventurers at heart, it reflects purpose, exploration, and inner clarity." },
     { id: 5, src: "/10.jpg", alt: "Gallery image 5", description: "A serene depiction of Lord Shiva in deep meditation, this tattoo symbolizes inner peace, cosmic balance, and spiritual awakening. It embodies divine stillness, strength, and the power of self-realization." },
     { id: 6, src: "/28.jpg", alt: "Gallery image 6", description: "The Trishul tattoo represents divine power, protection, and the destruction of evil. A sacred symbol of Lord Shiva, it embodies strength, courage, and spiritual transformation." },
     { id: 7, src: "/29.jpg", alt: "Gallery image 7", description: "A timeless symbol of beauty and renewal, this flower tattoo celebrates nature's elegance and emotional depth. Each petal tells a story of love, growth, and the vibrant journey of life." },
@@ -44,7 +44,7 @@ const ImageGallery = () => {
     // Cleanup
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
@@ -70,15 +70,15 @@ const ImageGallery = () => {
       </div>
 
       <div className={styles.carouselWrapper}>
-        <button 
-          className={`${styles.navButton} ${styles.prevButton}`} 
+        <button
+          className={`${styles.navButton} ${styles.prevButton}`}
           onClick={handlePrev}
           aria-label="Previous image"
         >
           <span className={styles.arrowIcon}>&#8592;</span>
         </button>
-        
-        <motion.div 
+
+        <motion.div
           className={styles.carousel}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -114,16 +114,16 @@ const ImageGallery = () => {
             </motion.div>
           ))}
         </motion.div>
-        
-        <button 
-          className={`${styles.navButton} ${styles.nextButton}`} 
+
+        <button
+          className={`${styles.navButton} ${styles.nextButton}`}
           onClick={handleNext}
           aria-label="Next image"
         >
           <span className={styles.arrowIcon}>&#8594;</span>
         </button>
       </div>
-      
+
       <div className={styles.indicators}>
         {images.map((_, index) => (
           <button

@@ -159,16 +159,16 @@ const Portfolio: NextPage = () => {
                 <SiThreads />
               </motion.a>
               <motion.a
-  href="https://maps.app.goo.gl/gTTZuq4oz8yWx8Dq9"
-  target="_blank"
-  rel="noopener noreferrer"
-  title="View Location on Google Maps"
-  className={`${styles.socialIcon} ${styles.location}`} // You can style this if needed
-  variants={socialVariants}
-  whileHover="hover"
->
-  <FaMapMarkerAlt />
-</motion.a>
+                href="https://maps.app.goo.gl/gTTZuq4oz8yWx8Dq9"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View Location on Google Maps"
+                className={`${styles.socialIcon} ${styles.location}`} // You can style this if needed
+                variants={socialVariants}
+                whileHover="hover"
+              >
+                <FaMapMarkerAlt />
+              </motion.a>
 
               {/* <motion.a 
                 href="#" 
@@ -201,7 +201,7 @@ const Portfolio: NextPage = () => {
 
               </motion.p>
               <motion.p variants={itemVariants}>
-                I&apos;m passionate about collaborating with clients to create custom, meaningful pieces that reflect their personal stories. 
+                I&apos;m passionate about collaborating with clients to create custom, meaningful pieces that reflect their personal stories.
 
               </motion.p>
             </motion.div>

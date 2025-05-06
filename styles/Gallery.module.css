@@ -1,8 +1,24 @@
-/* styles/Gallery.module.css */
 .container {
   min-height: 100vh;
-  background: #1a1a1a;
   color: #ffffff;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.heroSection {
+  max-width: 65%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .heroSection {
+    max-width: 100%;
+  }
+
 }
 
 .header {
@@ -29,11 +45,11 @@
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
   padding: 1rem;
+  width: 100%;
   position: relative;
-  width: 65%;
 }
 
 .galleryItem {
@@ -44,7 +60,8 @@
   cursor: pointer;
 }
 
-.galleryItem img, .galleryItem video {
+.galleryItem img,
+.galleryItem video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -80,7 +97,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(98, 0, 234, 0.7);
+  background: rgb(0 0 0 / 30%);
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -94,6 +111,11 @@
 
 .main {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .heroSection {

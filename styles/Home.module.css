@@ -260,13 +260,13 @@
 }
 
 .leftCard {
- 
+
   position: relative;
   margin-top: 10%;
 }
 
 .rightCard {
-  
+
   position: relative;
   margin-top: 40%;
 }
@@ -298,7 +298,8 @@
 .topLeft {
   left: -15px;
   top: -15px;
-  transform: rotate(256deg); /* Points inwards */
+  transform: rotate(256deg);
+  /* Points inwards */
 }
 
 .mobileMenuIcon {
@@ -313,7 +314,7 @@
   .navbar {
     width: 80%;
   }
-  
+
   .cardsSection {
     width: 80%;
     margin-top: 0;
@@ -325,11 +326,11 @@
     width: 90%;
     padding: 12px 20px;
   }
-  
+
   .mobileMenuIcon {
     display: block;
   }
-  
+
   .navItems {
     flex-direction: column;
     background-color: #1a1a1a;
@@ -343,90 +344,94 @@
     border-top: 1px solid #3a3a3a;
     z-index: 12;
   }
-  
+
   .showMenu {
     display: flex;
   }
-  
+
   .navItems li {
     margin: 10px 0;
     text-align: center;
   }
-  
+
   .contentSection {
     flex-direction: column-reverse;
     gap: 2rem;
     padding: 1rem;
     width: 90%;
   }
-  
+
   .leftSection {
     width: 100%;
     align-items: center;
     text-align: center;
     margin-top: 1rem;
   }
-  
+
   .rightSection {
     width: 100%;
     margin-top: 2rem;
   }
-  
+
   .heroTitle {
     font-size: 2.2rem;
   }
-  
+
   .heroSubTitle {
     font-size: 1.6rem;
   }
-  
+
   .heroContent {
     width: 100%;
     justify-content: center;
     font-size: 0.9rem;
   }
-  
+
   .heroButton {
     width: 70%;
   }
-  
+
   .cardsSection {
     width: 90%;
     margin-top: 3rem;
     padding: 20px 10px;
   }
-  
+
   .gridContainer {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .largeCard {
     grid-row: span 1;
     max-height: 250px;
   }
-  
+
   .messengerSection {
     flex-direction: column;
     gap: 3rem;
   }
-  
+
   /* Reset transforms for mobile */
-  .leftCard, .rightCard {
+  .leftCard,
+  .rightCard {
     transform: none;
     margin: 0;
   }
-  
+
   .messageCard {
     max-width: 250px;
   }
+
   .cardOne {
     transform: rotate(0deg);
   }
+
   .cardTwo {
     transform: rotate(0deg);
   }
-  .review{
+
+  .review {
     padding: 30px;
   }
 }
@@ -435,30 +440,30 @@
   .heroTitle {
     font-size: 1.8rem;
   }
-  
+
   .heroSubTitle {
     font-size: 1.4rem;
   }
-  
+
   .heroContent {
     font-size: 0.85rem;
   }
-  
+
   .heroButton {
     width: 80%;
     padding: 0.8rem;
   }
-  
+
   .cardsSection {
     padding: 10px 5px;
   }
-  
+
   .messageCard {
     max-width: 220px;
     padding: 15px;
     font-size: 14px;
   }
-  
+
   .navbar {
     padding: 10px 15px;
   }
