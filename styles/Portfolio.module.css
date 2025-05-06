@@ -152,6 +152,11 @@
     .miniGallery {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .portfolioCard{
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
 

@@ -119,6 +119,10 @@
         margin: 20px 0;
     }
 
+    .leftSection{
+        width: 100%;
+    }
+
     .leftSection img {
         height: 200px;
     }

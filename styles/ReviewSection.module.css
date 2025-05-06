@@ -1,93 +1,103 @@
 /* components/ReviewSection.module.css */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #181818; /* Dark background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #f1f1f1; /* Light text color for dark theme */
-    margin-bottom: 2rem;
-  }
-  
-  .summary {
-    display: flex;
-    justify-content: flex-start; /* Align to left side */
-    gap: 40px;
-    margin-bottom: 30px;
-  }
-  
-  .totalRating,
-  .happyClients {
-    text-align: left;
-  }
-  
-  .totalRating h2,
-  .happyClients h2 {
-    font-size: 18px;
-    margin: 5px;
-  }
-  
-  .totalRating p,
-  .happyClients p {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .chicklets {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-   
-  }
-  
-  .chicklet {
-    background-color: #2a2a2a; /* Dark background for chicklets */
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 25px;
-    font-size: 14px;
-    color: #ffffff; /* Light text color */
-    padding: 1rem;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+  max-width: 65%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #181818;
+  /* Dark background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #f1f1f1;
+  /* Light text color for dark theme */
+  margin-bottom: 2rem;
+}
 
+.summary {
+  display: flex;
+  justify-content: flex-start;
+  /* Align to left side */
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.totalRating,
+.happyClients {
+  text-align: left;
+}
+
+.totalRating h2,
+.happyClients h2 {
+  font-size: 18px;
+  margin: 5px;
+}
+
+.totalRating p,
+.happyClients p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.chicklets {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+}
+
+.chicklet {
+  background-color: #2a2a2a;
+  /* Dark background for chicklets */
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 25px;
+  font-size: 14px;
+  color: #ffffff;
+  /* Light text color */
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.reviews {
+  margin-top: 20px;
+}
+
+.reviewCard {
+  background-color: #282828;
+  /* Dark background for review cards */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: gold;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
   }
-  
-  .reviews {
-    margin-top: 20px;
-  }
-  
-  .reviewCard {
-    background-color: #282828; /* Dark background for review cards */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .reviewHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .name {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .rating {
-    display: flex;
-    gap: 2px;
-  }
-  
-  .star {
-    color: gold;
-    font-size: 18px;
-  }
-  
-  
+}
