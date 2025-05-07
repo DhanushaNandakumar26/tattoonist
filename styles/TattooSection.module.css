@@ -136,4 +136,8 @@
     .leftSection img {
         height: 200px;
     }
+
+    .rightSection p {
+        display: none;
+    }
 }

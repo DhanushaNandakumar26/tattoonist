@@ -39,6 +39,7 @@ export default function FirstSection() {
       };
     }
   }, []);
+  console.log(isLoaded)
 
   const handleContact = () => {
     router.push('/contact');
@@ -57,21 +58,18 @@ export default function FirstSection() {
         {/* Hero Section with Video Background */}
         <section className={styles.heroSection}>
           <div className={styles.videoContainer}>
-            {!isLoaded ? (
-              <div className={styles.loader}>Loading...</div>
-            ) : (
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className={styles.backgroundVideo}
-                onCanPlayThrough={() => setIsLoaded(true)}
-              >
-                <source src='/bgVideo.mp4' type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            )}
+
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className={styles.backgroundVideo}
+              onCanPlayThrough={() => setIsLoaded(true)}
+            >
+              <source src='/bgVideo.mp4' type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
             <div className={styles.overlay}></div>
           </div>
