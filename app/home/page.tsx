@@ -58,22 +58,15 @@ export default function FirstSection() {
         {/* Hero Section with Video Background */}
         <section className={styles.heroSection}>
           <div className={styles.videoContainer}>
-
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
+            <iframe
               className={styles.backgroundVideo}
-              onCanPlayThrough={() => setIsLoaded(true)}
-            >
-              <source src='/backgroundVideo.mp4' type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <div className={styles.overlay}></div>
+              src="https://www.youtube.com/embed/W5H2cpV6azI?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=W5H2cpV6azI"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              title="Background Video"
+            />
           </div>
-
           {/* Navbar */}
           <Navbar />
 
