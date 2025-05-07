@@ -20,19 +20,19 @@ export default function FirstSection() {
 
   useEffect(() => {
     setIsLoaded(true);
-    
+
     // Check if we're on client-side
     if (typeof window !== 'undefined') {
       // Initial check
       setIsMobile(window.innerWidth <= 768);
-      
+
       // Add resize listener
       const handleResize = () => {
         setIsMobile(window.innerWidth <= 768);
       };
-      
+
       window.addEventListener('resize', handleResize);
-      
+
       // Cleanup
       return () => {
         window.removeEventListener('resize', handleResize);
@@ -57,30 +57,35 @@ export default function FirstSection() {
         {/* Hero Section with Video Background */}
         <section className={styles.heroSection}>
           <div className={styles.videoContainer}>
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className={styles.backgroundVideo}
-              onCanPlayThrough={() => setIsLoaded(true)}
-            >
-              <source src='/bgVideo.mp4' type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            {!isLoaded ? (
+              <div className={styles.loader}>Loading...</div>
+            ) : (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className={styles.backgroundVideo}
+                onCanPlayThrough={() => setIsLoaded(true)}
+              >
+                <source src='/bgVideo.mp4' type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            )}
+
             <div className={styles.overlay}></div>
           </div>
 
           {/* Navbar */}
           <Navbar />
-          
+
           <div className={styles.contentSection}>
             {isMobile ? (
               // Mobile layout: Message section first, then text content
               <>
                 <div className={styles.rightSection}>
                   <section className={styles.messengerSection}>
-                    <motion.div 
+                    <motion.div
                       className={styles.leftCard}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -93,7 +98,7 @@ export default function FirstSection() {
                         </div>
                       </div>
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                       className={styles.rightCard}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -184,7 +189,7 @@ export default function FirstSection() {
                 </div>
                 <div className={styles.rightSection}>
                   <section className={styles.messengerSection}>
-                    <motion.div 
+                    <motion.div
                       className={styles.leftCard}
                       initial={{ y: -10 }}
                       animate={{ y: [0, -10, 0] }}
@@ -197,7 +202,7 @@ export default function FirstSection() {
                         </div>
                       </div>
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                       className={styles.rightCard}
                       initial={{ y: -10 }}
                       animate={{ y: [0, -10, 0] }}
@@ -228,9 +233,9 @@ export default function FirstSection() {
               transition={{ duration: 0.6 }}
             >
               <div className={styles.imageContainer}>
-                <Image 
-                  src="/tattoo-1.jpg" 
-                  alt="Tattoo Art" 
+                <Image
+                  src="/tattoo-1.jpg"
+                  alt="Tattoo Art"
                   className={styles.cardImage}
                   width={400}
                   height={300}
@@ -247,9 +252,9 @@ export default function FirstSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className={styles.imageContainer}>
-                <Image 
-                  src="/artist-2.jpg" 
-                  alt="Tattoo Artist" 
+                <Image
+                  src="/artist-2.jpg"
+                  alt="Tattoo Artist"
                   className={styles.cardImage}
                   width={400}
                   height={300}
@@ -266,9 +271,9 @@ export default function FirstSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <div className={styles.imageContainer}>
-                <Image 
-                  src="/tattoo-9.jpg" 
-                  alt="Tattoo Design" 
+                <Image
+                  src="/tattoo-9.jpg"
+                  alt="Tattoo Design"
                   className={styles.cardImage}
                   width={400}
                   height={300}
@@ -285,9 +290,9 @@ export default function FirstSection() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <div className={styles.imageContainer}>
-                <Image 
-                  src="/tattoo-10.jpg" 
-                  alt="Tattoo Art" 
+                <Image
+                  src="/tattoo-10.jpg"
+                  alt="Tattoo Art"
                   className={styles.cardImage}
                   width={400}
                   height={300}

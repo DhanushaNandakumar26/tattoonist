@@ -27,7 +27,7 @@ const About = () => {
               animate="visible"
               variants={textVariants}
             >
-              Ink Runs Deep: Tattoonist’s Story
+              Ink Runs Deep: Tattoonist&apos;s Story
             </motion.h1>
 
             <div className={styles.content}>
@@ -48,7 +48,7 @@ const About = () => {
                     animate="visible"
                     variants={textVariants}
                   >
-                    Five years ago in the cultural heart of Thrissur, Vibin transformed his lifelong passion for art into something permanent. Known among friends for his sketchbooks filled with designs blending Kerala's rich cultural heritage with contemporary aesthetics, Vibin found himself increasingly asked to bring his unique artistic vision to life as tattoos.
+                    Five years ago in the cultural heart of Thrissur, Vibin transformed his lifelong passion for art into something permanent. Known among friends for his sketchbooks filled with designs blending Kerala&apos;s rich cultural heritage with contemporary aesthetics, Vibin found himself increasingly asked to bring his unique artistic vision to life as tattoos.
                   </motion.p>
                   <motion.p
                     className={styles.description}
@@ -56,7 +56,7 @@ const About = () => {
                     animate="visible"
                     variants={textVariants}
                   >
-                    What quickly set Vibin's work apart was his thoughtful approach—sitting with clients over chai, listening to their stories, and creating designs that captured not just images but meanings.
+                    What quickly set Vibin&apos;s work apart was his thoughtful approach—sitting with clients over chai, listening to their stories, and creating designs that captured not just images but meanings.
                   </motion.p>
                 </div>
               </div>
@@ -77,7 +77,7 @@ const About = () => {
                   animate="visible"
                   variants={textVariants}
                 >
-                  Today, Ink & Soul has grown from its humble beginnings but continues to carry the same heart and vision it was founded on. Each tattoo is a collaboration—a reflection of personal journeys, whether it's a grandmother’s favorite flower or ancient Malayalam scripts reimagined with a modern touch.
+                  Today, Ink & Soul has grown from its humble beginnings but continues to carry the same heart and vision it was founded on. Each tattoo is a collaboration—a reflection of personal journeys, whether it&apos;s a grandmother&apos;s favorite flower or ancient Malayalam scripts reimagined with a modern touch.
                 </motion.p>
 
               </div>
