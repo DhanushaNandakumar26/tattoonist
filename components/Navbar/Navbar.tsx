@@ -31,8 +31,8 @@ const Navbar = () => {
           <Image
             src="/tattoonist-logo-2.png"
             alt="Company Logo"
-            width={100}
-            height={100}
+            width={80}
+            height={80}
             className={styles.logoImage}
           />
         </Link>

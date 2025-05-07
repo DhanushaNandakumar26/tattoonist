@@ -67,7 +67,7 @@ export default function FirstSection() {
               className={styles.backgroundVideo}
               onCanPlayThrough={() => setIsLoaded(true)}
             >
-              <source src='/bgVideo.mp4' type="video/mp4" />
+              <source src='/backgroundVideo.mp4' type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
